@@ -58,3 +58,73 @@
     background-color: #c9302c;
   }
   
+  /* Auth.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2a44;
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar .logo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.navbar .nav-links {
+  display: flex;
+}
+
+.nav-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.nav-button:hover {
+  background-color: #45a049;
+}
+
+.guest-home-content {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.guest-home-content h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.guest-home-content p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Auth.css (Add to existing file) */
+.dashboard-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.dashboard-content {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.dashboard-content h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.dashboard-content p {
+  font-size: 18px;
+  color: #666;
+}
+
