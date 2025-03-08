@@ -42,13 +42,19 @@ router.post("/login", async (req, res) => {
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) return res.status(400).json({ error: "Invalid credentials!" });
 
+    const jwt = require("jsonwebtoken");
+
     const token = jwt.sign({ id: user._id, username: user.username }, process.env.JWT_SECRET, { expiresIn: "1h" });
-    
+
+    // Log the token to the terminal
+    console.log("JWT Token: ", token);
+
     res.json({ token });
   } catch (err) {
     res.status(500).json({ error: "Server error!" });
   }
 });
+
 
 // Protected Route
 router.get("/dashboard", async (req, res) => {
