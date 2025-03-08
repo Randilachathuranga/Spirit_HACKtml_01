@@ -19,14 +19,14 @@ const Login = () => {
         username,
         password,
       });
-      localStorage.setItem("token", res.data.token);
-      localStorage.setItem("token", res.data.token);
+      localStorage.setItem("token", res.data.token); // Storing token once
       localStorage.setItem("username", username);
       navigate("/dashboard");
     } catch (err) {
       setError(err.response?.data?.error || "Login failed!");
     }
   };
+  
 
   return (
     <div className="auth-container">
