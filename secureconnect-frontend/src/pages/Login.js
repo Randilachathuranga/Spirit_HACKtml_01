@@ -26,7 +26,12 @@ const Login = () => {
       setError(err.response?.data?.error || "Login failed!");
     }
   };
-  
+
+  // Function to navigate to GuestHomePage
+  const handleGuestLogin = () => {
+    localStorage.setItem("username", "Guest");
+    navigate("/");
+  };
 
   return (
     <div className="auth-container">
@@ -46,7 +51,12 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button className="auth-button" type="submit">Login</button>
+          <button className="auth-button" type="submit">
+            Login
+          </button>
+          <button className="auth-button" onClick={handleGuestLogin}>
+            Login as a Guest
+          </button>
         </form>
       </div>
     </div>
