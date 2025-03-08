@@ -15,18 +15,35 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
+      // First, authenticate the user by sending username and password
       const res = await axios.post("http://localhost:5000/api/login", {
         username,
         password,
       });
-      localStorage.setItem("token", res.data.token); // Storing token once
+  
+      localStorage.setItem("token", res.data.token); // Store token
       localStorage.setItem("username", username);
-      navigate("/dashboard");
+  
+      // Fetch user role from /get-role route
+      const roleRes = await axios.post("http://localhost:5000/api/get-role", {
+        username,
+        password,
+      });
+  
+      // Store the role in localStorage
+      localStorage.setItem("role", roleRes.data.role);
+  
+      // Check role and navigate accordingly
+      if (roleRes.data.role === "admin") {
+        navigate("/admindashboard"); // Navigate to admin dashboard if role is admin
+      } else {
+        navigate("/dashboard"); // Navigate to user dashboard if role is user
+      }
     } catch (err) {
       setError(err.response?.data?.error || "Login failed!");
     }
   };
-
+  
   // Function to navigate to GuestHomePage
   const handleGuestLogin = () => {
     localStorage.setItem("username", "Guest");
