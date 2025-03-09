@@ -1,48 +1,19 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import "../styles/GuestHome.css";
+import Navbar from "../components/Navbar";
 
 const GuestHomePage = () => {
-  const navigate = useNavigate();
   const token = localStorage.getItem("token");
-
-  const handleLoginClick = () => {
-    navigate("/login");
-  };
-
-  const handleSignupClick = () => {
-    navigate("/signup");
-  };
+  const username = localStorage.getItem("username");
+  const role = localStorage.getItem("role");
 
   return (
     <div>
-      <nav className="navbar">
-        <div className="logo">
-          <h1>SecureConnect</h1>
-        </div>
-        <div className="nav-links">
-          {!token ? (
-            <>
-              <button className="nav-button" onClick={handleLoginClick}>
-                Login
-              </button>
-              <button className="nav-button" onClick={handleSignupClick}>
-                Sign Up
-              </button>
-            </>
-          ) : (
-            <button
-              className="nav-button"
-              onClick={() => {
-                localStorage.removeItem("token");
-                navigate("/login");
-              }}
-            >
-              Logout
-            </button>
-          )}
-        </div>
-      </nav>
+      <Navbar 
+        isLoggedIn={!!token} 
+        username={username} 
+        role={role}
+      />
 
       <div className="guest-home-content">
         <h2>Welcome to SecureConnect</h2>
