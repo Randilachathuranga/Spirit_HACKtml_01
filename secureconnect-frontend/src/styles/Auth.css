@@ -193,3 +193,36 @@ button.auth-button + button.auth-button:hover {
   }
 }
 
+.success-box {
+  text-align: center;
+  padding: 2rem;
+}
+
+.success-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  background-color: #32cd32;
+  color: white;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.success-box h2 {
+  color: #32cd32;
+  margin-bottom: 1rem;
+}
+
+.success-box p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.success-box .auth-button {
+  margin-top: 1rem;
+}
+
