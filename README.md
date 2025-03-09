@@ -64,7 +64,7 @@ If you'd like to run the application with the same database as the demo, you can
 - You can download the dump file from our repository .
 - Or, if you want to create your own dump, follow the instructions below.
 
-3.Restoring the Database
+3). Restoring the Database
 
 Step 1: Download the dump file
 - Place the downloaded dump file in a directory on your local machine, e.g., `C:\mongodb-dump\`.
@@ -84,7 +84,7 @@ To restore the database from the dump file, use the `mongorestore` command:
    mongorestore --uri="mongodb+srv://your-mongo-connection-string" --dir="C:\mongodb-dump"
 
 
-Any assumptions made during development 
+4). Any assumptions made during development 
 
 User Feedback & Error Handling: Clear user messages and effective error management.
 Testing & Reliability: Thorough testing for functionality and performance.
@@ -92,7 +92,7 @@ Security & Logging: Proper error logging and secure operations.
 Cross-Browser & Performance: Optimized for speed and compatibility across browsers.
 
 
-Additional features implemented
+5). Additional features implemented
 
 JWT tokens are used for Authentication and Authorisation. Those tokens are only valid for an hour.
 Secured system. Passwords are hashed.
