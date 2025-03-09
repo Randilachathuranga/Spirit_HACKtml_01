@@ -5,9 +5,7 @@ README file
 
 Project 1 - SecureConnect
 
-
-
-1) Instructions to run the project
+1). Instructions to run the project
 
 
 
