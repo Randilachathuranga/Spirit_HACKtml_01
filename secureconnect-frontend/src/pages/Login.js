@@ -1,10 +1,9 @@
-import "../styles/Auth.css";
-
 import React, { useState } from "react";
 
 import InputField from "../components/InputField";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import "../styles/Auth.css";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -68,13 +67,18 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button className="auth-button" type="submit">
-            Login
-          </button>
-          <button className="auth-button" onClick={handleGuestLogin}>
-            Login as a Guest
-          </button>
+          <div className="auth-button-group">  
+            <button className="auth-button" type="submit">
+              Login
+            </button>
+            <button type="button" className="auth-button" onClick={handleGuestLogin}>
+              Login as a Guest
+            </button>
+          </div>
         </form>
+        <div className="auth-links">
+          Don't have an account? <Link to="/signup">Sign up</Link>
+        </div>
       </div>
     </div>
   );
