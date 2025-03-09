@@ -4,7 +4,7 @@
   background-size: cover;
   font-family: Arial, sans-serif;
   padding: 0;
-  position: relative; /* Position relative for stacking context */
+  position: relative;
 }
 
 .dashboard-content {
@@ -17,8 +17,8 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
   position: relative;
-  z-index: 1; /* Lower z-index than navbar */
-  transition: margin-top 0.3s ease; /* Smooth transition for margin changes */
+  z-index: 1;
+  transition: margin-top 0.3s ease; 
 }
 
 .dashboard-content h2 {

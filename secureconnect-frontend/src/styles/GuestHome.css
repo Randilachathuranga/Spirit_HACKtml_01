@@ -14,8 +14,8 @@ body {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
   position: relative;
-  z-index: 1; /* Lower z-index than navbar */
-  transition: margin-top 0.3s ease; /* Smooth transition for margin changes */
+  z-index: 1;
+  transition: margin-top 0.3s ease; 
 }
 
 .guest-home-content h2 {
